@@ -1,1 +1,2 @@
-
+- Python: `with open('filename.txt', 'mode') as file_object:` recommended and safest way to handle file operations as it **closes the file automatically** after use
+- Bash: `mv original_filename {,_extended_filename}` results in the **final filename** as *`original_filename_extended_filename`*
