@@ -4,3 +4,4 @@
 - Python: Simply converting a file with numbers(string format) to actually int numbers
   > ![John Hammond PicoCtf2022 #2](https://github.com/CBSINHA/Linux-Cybersecurity-ShortNotes/blob/main/Picture%20Uploads/pic1.png)
 - Linux: `grep "TEXT" file` searches for TEXT in file `file filename` gives the type of file along with a short description `unzip files.zip` to unzip a file `.` means current directory `find . -name file.txt` searches recursively for file.txt, and prints the full path to every match.
+- `grep -r "text"` will search for text everywhere including subdirectories within a directory || **-r for recursive**
