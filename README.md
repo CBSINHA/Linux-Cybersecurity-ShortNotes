@@ -10,9 +10,9 @@
 
  ----
 # THE SELUTH KIT
-+ ***mm*** : All tools prepended with mm operate on disk lvl with minimal guidance from operator. The media layer doesnt provide much info about the data contained in the disk image. Ex: `mmls` -> used to list and view the partition layout of a disk or disk image
-+ ***blk*** : Block layer is the numbers of the disk image broken into equal-sized chunks. A single file is likely to contain multiple blocks. Ex: `blkcat` -> used to display/extract the raw contents of specific blocks (sectors) from a disk image.
-+ ***i*** : An inode is a structure that stores all the metadata about a file (except its name) and points to the blocks containing its actual data. Ex: `icat` -> used to extract or display the contents of a file directly from a disk image, using its inode number.
-+ ***f*** : Filename layer, where most users interact. Ex: `fls`-> lists files and directories (including deleted ones) from a disk image and shows their inode numbers.
++ ***mm*** : All tools prepended with mm operate on disk lvl with minimal guidance from operator. The media layer doesnt provide much info about the data contained in the disk image. Ex: `mmls [options] <disk_image>` -> used to list and view the partition layout of a disk or disk image
++ ***blk*** : Block layer is the numbers of the disk image broken into equal-sized chunks. A single file is likely to contain multiple blocks. Ex: `blkcat [options] <image> <blk_address>` -> used to display/extract the raw contents of specific blocks (sectors) from a disk image.
++ ***i*** : An inode is a structure that stores all the metadata about a file (except its name) and points to the blocks containing its actual data. Ex: `icat [options] <image> <inode>` -> used to extract or display the contents of a file from a disk image, using its inode number.
++ ***f*** : Filename layer, where most users interact. Ex: `fls [options] <image>`-> lists files and directories (including deleted ones) from a disk image and shows their inode numbers.
 
 ----
