@@ -17,3 +17,9 @@
 + EX: `fls -o 360448 disk.flag.img 451` will list files and dir in *disk.flag.img* with offset (**-o**) [obtained using `mmls`] and inode 451 [obtained using `fls -o 360448 disk.flag.img`]
 
 ----
+
+# Python Errors
+- `ZeroDivisionError` : Trying to divide by 0
+- `ValueError` : Wrong value type entered. Ex: float("hello") **OR** if a user enters a string where they were supposed to enter another data type
+
+----
