@@ -9,7 +9,8 @@
 - Python: `reversed(list1)` will return a reversed iterator, use `for i  in reversed(list1)` to traverse list backwards, to make it reversed new list: `list(reversed(list1))`
 - Python: To access and pass arguments to a program using CLI
   > ![Python Code screenshot](https://github.com/CBSINHA/Linux-Cybersecurity-ShortNotes/blob/main/Picture%20Uploads/2025-11-03%2001_26_08-NVIDIA%20GeForce%20Overlay.png)
-
+- Python: **ASCII**: *Decimal*: 65(A) ; 97(a) :: *Hexadecimal*: 41(A):5A(Z) ; 61(a):7A(z)
+- Python: Using the escape sequence `\x` will interpret **2 numbers** after it as Hex characters. Ex: `print("\x43\x41")` will print **CA**
  ----
 # THE SELUTH KIT
 + ***mm*** : All tools prepended with mm operate on disk lvl with minimal guidance from operator. The media layer doesnt provide much info about the data contained in the disk image. Ex: `mmls [options] <disk_image>` -> used to list and view the partition layout of a disk or disk image
