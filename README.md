@@ -27,3 +27,9 @@
 - `ValueError` : Wrong value type entered. Ex: float("hello") **OR** if a user enters a string where they were supposed to enter another data type
 
 ----
+
+# HTML & JS
+- Inputting a number and showing the result as number + 10
+  >![](https://github.com/CBSINHA/Linux-Cybersecurity-ShortNotes/blob/main/Picture%20Uploads/htmlcode.png)  ![](https://github.com/CBSINHA/Linux-Cybersecurity-ShortNotes/blob/main/Picture%20Uploads/2025-11-03_15-46.png)
+
+----
