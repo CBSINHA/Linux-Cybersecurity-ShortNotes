@@ -29,7 +29,15 @@
 ----
 
 # HTML & JS
+- HTML & JS are executed in the **browser**
 - Inputting a number and showing the result as number + 10
   >![](https://github.com/CBSINHA/Linux-Cybersecurity-ShortNotes/blob/main/Picture%20Uploads/htmlcode.png)  ![](https://github.com/CBSINHA/Linux-Cybersecurity-ShortNotes/blob/main/Picture%20Uploads/2025-11-03_15-46.png)
 
+----
+
+# PHP
+- In a file with the extension `*.php` we can mix html, JavaScript, and PHP code! If the server supports PHP, everything inside <?php ?> will be understood as PHP code and run by the **server**, not by the browser.
+- Code in `*.php` to view time and run js code
+  >![](https://github.com/CBSINHA/Linux-Cybersecurity-ShortNotes/blob/main/Picture%20Uploads/2025-11-04%2018_45_35-NVIDIA%20GeForce%20Overlay.png)
+- for `date("h:i:s a");`: `h`: hour in 12 hr format `H`: hour in 24 hr format `i`: minutes `s`: seconds `a`: am/pm (Note that `m` shows month in numerical and `M` shows month in Letters)
 ----
