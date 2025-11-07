@@ -41,3 +41,16 @@
   >![](https://github.com/CBSINHA/Linux-Cybersecurity-ShortNotes/blob/main/Picture%20Uploads/2025-11-04%2018_45_35-NVIDIA%20GeForce%20Overlay.png)
 - for `date("h:i:s a");`: `h`: hour in 12 hr format `H`: hour in 24 hr format `i`: minutes `s`: seconds `a`: am/pm (Note that `m` shows month in numerical and `M` shows month in Letters)
 ----
+
+# Croxx Site Scripting (XSS)
+- XSS means attacker injects and executes their JavaScript on someone else’s browser through a vulnerable website allowing them to steal data, cookies and perform other actions.
+> **COOKIES**
+> - A small **TEXT FILE** that a website stores on your device to remember information about you.
+> - When we revisit the same site, the browser resends the cookie back to the server for recognising us.
+> - Cookies do Session Management(like keeping us signed in), Personalization(like theme), tracking our browsing behaviour for ads.
+- Only using cookies for authentication will open the possibility of **Cross Site Request Forgery (CSRF).**
+>> ![](https://github.com/CBSINHA/Linux-Cybersecurity-ShortNotes/blob/main/Picture%20Uploads/2025-11-07%2014_02_18-NVIDIA%20GeForce%20Overlay.png)
+>> - `<script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>` line makes jQuery available to use in the HTML page.
+>> - `$.get("server name",{key:value},function(data){//Runs only on HTTP200(success)});` : `$.get()` asks the server for data → waits silently → if the server replies successfully → runs your function with success code.
+
+----
