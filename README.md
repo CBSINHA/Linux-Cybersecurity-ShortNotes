@@ -13,7 +13,7 @@
 - Python: **ASCII**: *Decimal*: 65(A) ; 97(a) :: *Hexadecimal*: 41(A):5A(Z) ; 61(a):7A(z)
 - Python: Using the escape sequence `\x` will interpret **2 numbers** after it as Hex characters. Ex: `print("\x43\x41")` will print **CA**
 - Python: `python -c 'print("\x5F\x42\x5F")'` is the shortcode syntax for using python in CLI. The program outputs **\_B_**
-- -Python: `ord(character)` is used to convert a character to its unicode value and `chr(integer)` converts the unicode integer back to its corresponding character.
+- Python: `ord(character)` is used to convert a character to its unicode value and `chr(integer)` converts the unicode integer back to its corresponding character.
  ----
 # THE SELUTH KIT
 + ***mm*** : All tools prepended with mm operate on disk lvl with minimal guidance from operator. The media layer doesnt provide much info about the data contained in the disk image. Ex: `mmls [options] <disk_image>` -> used to list and view the partition layout of a disk or disk image
