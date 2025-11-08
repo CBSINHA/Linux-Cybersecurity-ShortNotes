@@ -3,6 +3,7 @@
 - Linux: `mv original_filename {,_extended_filename}` results in the **final filename** as *`original_filename_extended_filename`*
 - Python: Simply converting a file with numbers(string format) to actually int numbers
   > ![John Hammond PicoCtf2022 #2](https://github.com/CBSINHA/Linux-Cybersecurity-ShortNotes/blob/main/Picture%20Uploads/pic1.png)
+- `zip file.zip file.txt` will zip "file.txt" and create a new **.zip** file called *file.zip* on the other hand if we need to zip a directory we need to use **`-r`** flag like `zip -r dir.zip dirname` this will recursively zip all subdirs as well as files inside of "dirname" if we don't use the **`-r`** flag then the subdirs will not be properly zipped.
 - Linux: `grep "TEXT" file` searches for TEXT in file `file filename` gives the type of file along with a short description `unzip files.zip` to unzip a file `.` means current directory `find . -name file.txt` searches recursively for file.txt, and prints the full path to every match.
 - Linux: `grep -r "text"` will search for text everywhere including subdirectories within a directory || **-r for recursive**
 - Linux: `unzip` command unzips a *.zip* file and the output is the og zip file along with multiple unzipped files **BUT** `gunzip` command unzips a *.gz* file and the og .gz file is deleted and replaced witha single unzipped file. `zcat .gz_file >/tmp/disk` will do the same operation as gunzip but extracts to a specified file in a directory (same as `gunzip -c .gz_file >/tmp/disk`)
@@ -12,6 +13,7 @@
 - Python: **ASCII**: *Decimal*: 65(A) ; 97(a) :: *Hexadecimal*: 41(A):5A(Z) ; 61(a):7A(z)
 - Python: Using the escape sequence `\x` will interpret **2 numbers** after it as Hex characters. Ex: `print("\x43\x41")` will print **CA**
 - Python: `python -c 'print("\x5F\x42\x5F")'` is the shortcode syntax for using python in CLI. The program outputs **\_B_**
+- -Python: `ord(character)` is used to convert a character to its unicode value and `chr(integer)` converts the unicode integer back to its corresponding character.
  ----
 # THE SELUTH KIT
 + ***mm*** : All tools prepended with mm operate on disk lvl with minimal guidance from operator. The media layer doesnt provide much info about the data contained in the disk image. Ex: `mmls [options] <disk_image>` -> used to list and view the partition layout of a disk or disk image
@@ -52,5 +54,17 @@
 >> ![](https://github.com/CBSINHA/Linux-Cybersecurity-ShortNotes/blob/main/Picture%20Uploads/2025-11-07%2014_02_18-NVIDIA%20GeForce%20Overlay.png)
 >> - `<script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>` line makes jQuery available to use in the HTML page.
 >> - `$.get("server name",{key:value},function(data){//Runs only on HTTP200(success)});` : `$.get()` asks the server for data → waits silently → if the server replies successfully → runs your function with success code.
+
+----
+
+# Cryptography
+- Achieves **Confidentiality**(unintended can't read message) **Integrity**(message tampering should be detectable) **Authentication**(identity of a person can be verified accurately) **Non-Repudiation**(if someone sent a message, they can't deny the message was sent by them)
+-  `zip --encrypt -r dir.zip dirname` will zip and encrypt using an older algorithm: **ZipCrypto**, which can be decrypted using `unzip dir.zip` using the *same password*
+-  **Types of Ciphers**:
+- - *Substution Ciphers*
+    > It works by replacing each symbol in the plaintext with another symbol according to a fixed rule or key.
+    > - **Monoalphabetic**: Each plaintext letter maps to a single fixed ciphertext letter. Ex: Ceaser Cipher.
+    > - **Polyalphabetic**: Uses multiple substitution alphabets(the substitution changes after each letter, based on a key). Ex: Vigenère Cipher
+    > - **Homophonic**: Maps one plaintext symbol to multiple possible ciphertext symbols.
 
 ----
