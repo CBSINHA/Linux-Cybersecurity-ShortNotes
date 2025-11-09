@@ -51,9 +51,9 @@
 > - When we revisit the same site, the browser resends the cookie back to the server for recognising us.
 > - Cookies do Session Management(like keeping us signed in), Personalization(like theme), tracking our browsing behaviour for ads.
 - Only using cookies for authentication will open the possibility of **Cross Site Request Forgery (CSRF).**
->> ![](https://github.com/CBSINHA/Linux-Cybersecurity-ShortNotes/blob/main/Picture%20Uploads/2025-11-07%2014_02_18-NVIDIA%20GeForce%20Overlay.png)
->> - `<script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>` line makes jQuery available to use in the HTML page.
->> - `$.get("server name",{key:value},function(data){//Runs only on HTTP200(success)});` : `$.get()` asks the server for data → waits silently → if the server replies successfully → runs your function with success code.
+> ![](https://github.com/CBSINHA/Linux-Cybersecurity-ShortNotes/blob/main/Picture%20Uploads/2025-11-07%2014_02_18-NVIDIA%20GeForce%20Overlay.png)
+> - `<script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>` line makes jQuery available to use in the HTML page.
+> - `$.get("server name",{key:value},function(data){//Runs only on HTTP200(success)});` : `$.get()` asks the server for data → waits silently → if the server replies successfully → runs your function with success code.
 
 ----
 
@@ -66,5 +66,30 @@
     > - **Monoalphabetic**: Each plaintext letter maps to a single fixed ciphertext letter. Ex: Ceaser Cipher.
     > - **Polyalphabetic**: Uses multiple substitution alphabets(the substitution changes after each letter, based on a key). Ex: Vigenère Cipher
     > - **Homophonic**: Maps one plaintext symbol to multiple possible ciphertext symbols.
+- - *Transposition Ciphers*
+    > Reorders the message instead of replacing its letters.
+    > - **Rail Fence Cipher**: Letters are written in a zigzag pattern and then read row by row to get the ciphertext.
+    > - **Columnar Transposition**: Message is written in rows under columns labeled by key numbers, then columns are read in key order to get the ciphertext.
+    > - **Double Transposition**: The columnar transposition is applied twice.
+    > - **Permutation Cipher**: Uses a fixed permutation pattern for rearranging blocks of text.
+- ### Modern Cryptography
+> - **Symmetric Cryptography**
+>> - Same keys for encryption and decryption.
+>> - Ex: **Advanced Encryption Standard (AES)**:
+>>> - Combination of substitutions and transpositions using a key of fixed length(128 bit **OR** 256 bit)
+>>> - **ECB(Electronic Code Book) operation mode:**
+>>>> -  If using AES 128, we break the clear text in chunks of 128 bits and use AES to encrypt them independently.
+>>>> -  Problem of leaking structure in the encrypted text.
+>>>> -  If same message is resent, an attacker can see that the same message is being sent again.
+>>>> -  **NOT RECOMMENDED**
+>>> - **CBC(Cipher Block Chaining) operation mode:**
+>>>> - Additional elements included such as **initialization vector**(a random value with the same size as the key, different for every message). Before starting the encryption, we do **XOR** between the **first block of cleartext** and the **Initialization Vector**, *Initialization vector is attached with the message once after encryption*, **we do not encrypt blocks independently**, but we use the encrypted text from one block and XOR it with the next block of cleartext we want to encrypt. Then, we use AES and the key to encrypt that result.
+>>>>> ![](https://github.com/CBSINHA/Linux-Cybersecurity-ShortNotes/blob/main/Picture%20Uploads/2025-11-09%2019_54_10-NVIDIA%20GeForce%20Overlay.png)
+>>> - Cleartext must be the same size as a multiple of the block size, for that we add padding, **PKCS #7** is standard.Ex: using **AES128**, block size is 128bits or 16bytes, if our cleartext has 12 bytes then we need padding of +4 bytes, the final cleartext with pad will be: **"12byte_message"+"\x04\x04\x04\x04"**, if 15 byte message then final message with pad:  **"15byte_message"+"\x01"**
+> - **Asymmetric Cryptography**
+>> - **Public key** for encryption and **Private key** for decryption
+>> - Ex: **Rivest-Shamir-Adleman (RSA)**:
+>>> - 
+>> - Used for ***digital signatures*** (**private key** is used to encrypt a hash of the data, signer's **public key** can then be used to decrypt ensuring authenticity, integrity and non-repudiation)
 
 ----
