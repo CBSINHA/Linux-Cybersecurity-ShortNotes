@@ -89,7 +89,11 @@
 > - **Asymmetric Cryptography**
 >> - **Public key** for encryption and **Private key** for decryption
 >> - Ex: **Rivest-Shamir-Adleman (RSA)**:
->>> - 
+>>> - RSA public key: Pair of numbers (*e,n*) ; Private Key: Pair of numbers (*d,n*) ; Message(*m*) ; Ciphertext(*c*)
+>>> - Encryption: **m<sup>e</sup> mod n=c** Decryption: **c<sup>d</sup> mod n=m**
+>>> - **The KEY GENERATION Algorithm :**
+>>>> - Take 2 large co-prime numbers **p** and **q**
+>>> - RSA is considered secure only if the key is a number that would take at least 2048 bits(617 digits).
 >> - Used for ***digital signatures*** (**private key** is used to encrypt a hash of the data, signer's **public key** can then be used to decrypt ensuring authenticity, integrity and non-repudiation)
 
 ----
