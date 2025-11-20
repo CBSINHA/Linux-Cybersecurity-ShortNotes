@@ -93,6 +93,10 @@
 >>> - Encryption: **m<sup>e</sup> mod n=c** Decryption: **c<sup>d</sup> mod n=m**
 >>> - **The KEY GENERATION Algorithm :**
 >>>> - Take 2 large co-prime numbers **p** and **q**
+>>>> - Find **n = pq** and **phi = (p-1) (q-1)**
+>>>> - Select **e** such that **1 < e < phi**, and *e is coprime of phi*
+>>>> - Find **d**, which is the **multiplicative inverse of e % phi**.
+>>>> - **(e, n) is the public key and  (d, n) is the private key.**
 >>> - RSA is considered secure only if the key is a number that would take at least 2048 bits(617 digits).
 >> - Used for ***digital signatures*** (**private key** is used to encrypt a hash of the data, signer's **public key** can then be used to decrypt ensuring authenticity, integrity and non-repudiation)
 
