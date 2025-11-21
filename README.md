@@ -98,6 +98,16 @@
 >>>> - Find **d**, which is the **multiplicative inverse of e % phi**.
 >>>> - **(e, n) is the public key and  (d, n) is the private key.**
 >>> - RSA is considered secure only if the key is a number that would take at least 2048 bits(617 digits).
+>>> - **HOW TO ATTACK RSA WITH SMALL N:**
+>>>> - We get private key from the publically available key.
+>>>> - We save the digital certificate which has data of the owner + public key encoded in base64 as `weak_n_certificate`.
+>>>> - Use command : **`openssl x509 -in weak_n_certificate -text -noout`**
+>>>>> - `openssl x509`: Tells OpenSSL to work with an **X.509** certificate (the standard format for SSL certificates).
+>>>>> - `-in weak_n_certificate`: Specifies input file.
+>>>>> - `-text`: Prints certificate in human readable format.
+>>>>> - `-noout`: Prevents printing the whole encoded certificate again.
+>>>> - We can see things like *n* & *e* values from the certificate.
+>>>> - Since n is deliberately small here, we can simply use any integer factorisation tool to get **p** and **q** values and get the private key eventually !!
 >> - Used for ***digital signatures*** (**private key** is used to encrypt a hash of the data, signer's **public key** can then be used to decrypt ensuring authenticity, integrity and non-repudiation)
 
 ----
