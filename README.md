@@ -111,3 +111,8 @@
 >> - Used for ***digital signatures*** (**private key** is used to encrypt a hash of the data, signer's **public key** can then be used to decrypt ensuring authenticity, integrity and non-repudiation)
 
 ----
+- `zip -d backup.zip a.txt`: Deletes a.txt from a backup.zip which alr had a.txt zipped with it
+- `zip -u backup.zip a.txt`: Adds or Updates backup.zip with new file a.txt
+- `tar -cvf file.tar *.txt`: Tar bundles all files(does not reduces size)[tar=tape archive]
+- `tar -xvf file.tar` : Extract files from tar archive.
+- `tree` reveals current dir full tree structure
