@@ -116,3 +116,7 @@
 - `tar -cvf file.tar *.txt`: Tar bundles all files(does not reduces size)[tar=tape archive]
 - `tar -xvf file.tar` : Extract files from tar archive.
 - `tree` reveals current dir full tree structure
+- **cron** is a task that runs at scheduled times
+- `crontab -e`: to edit cron jobs
+- `* * * * * /test.sh`: each star(left-->right)[total 5] denotes ***minutes: hour: day-of-month: month :day-of-week***
+- If i wanted to run test.sh every week on wednesday at 1:30pm i would do: `30 13 * * 3 /test.sh `
